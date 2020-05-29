@@ -3,6 +3,8 @@ package com.lodenou.mylittlegame;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -24,7 +26,8 @@ public class StartActivity extends AppCompatActivity implements AdapterView.OnIt
     private MusicService mServ;
     ImageButton mImageButton;
     Button new_game_button;
-    String[] mClasses = {"Guerrier","Magicien","Moine", "Ninja", "Samouraï","Paysan"};
+    private String[] mClasses = {"Guerrier","Magicien","Moine", "Ninja", "Samouraï","Paysan"};
+
 
 
 
@@ -134,10 +137,11 @@ public class StartActivity extends AppCompatActivity implements AdapterView.OnIt
 
     }
 
-    private void initiateSpinner() {
+    public void initiateSpinner() {
         //SPINNER SETTINGS
 
         //Getting the instance of Spinner and applying OnItemSelectedListener on it
+
         final Spinner spin = (Spinner) findViewById(R.id.spinner);
         spin.setOnItemSelectedListener(this);
 
@@ -149,7 +153,7 @@ public class StartActivity extends AppCompatActivity implements AdapterView.OnIt
                 aa,
                 R.layout.contact_spinner_row_nothing_selected,
                 this));
-        spin.setPrompt("Selectionnez une salle");
+        spin.setPrompt("Select your class");
     }
 
     @Override
