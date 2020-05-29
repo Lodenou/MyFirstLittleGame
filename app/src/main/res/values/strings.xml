@@ -5,4 +5,7 @@
     <string name="load_game">Load game</string>
     <string name="settings">Settings</string>
     <string name="mylittlegame">MyLittleGame</string>
+    <string name="enter_your_character_name">Enter your character name</string>
+    <string name="done">Done</string>
+    <string name="cancel">Cancel</string>
 </resources>
