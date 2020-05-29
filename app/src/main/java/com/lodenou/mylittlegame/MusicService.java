@@ -1,10 +1,14 @@
 package com.lodenou.mylittlegame;
 
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Binder;
 import android.os.IBinder;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
     public class MusicService extends Service implements MediaPlayer.OnErrorListener {
@@ -27,10 +31,10 @@ import android.widget.Toast;
             return mBinder;
         }
 
+
         @Override
         public void onCreate() {
             super.onCreate();
-
             mPlayer = MediaPlayer.create(this, R.raw.bensound); //replace with your song name!
             mPlayer.setOnErrorListener(this);
 
