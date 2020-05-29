@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="170dp"
-    android:background="@drawable/rounded_button"
+    android:layout_height="280dp"
+    android:background="#26418f"
     android:orientation="vertical" >
 
     <TextView
@@ -10,7 +11,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         android:fontFamily="@font/pacifico"
         android:text="@string/enter_your_character_name"
         android:textColor="@android:color/white"
@@ -19,14 +22,36 @@
 
     <EditText
         android:id="@+id/edit_text-dialog"
-        android:layout_width="207dp"
+        android:layout_width="217dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"
-        android:background="@drawable/rounded_button"
+        android:background="#ffffff"
         android:backgroundTint="#ffffff">
-
     </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/choisissez_votre_classe"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/pacifico"
+        android:textSize="19sp">
+    </TextView>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#ffffff"
+        android:popupBackground="#ffffff"
+        >
+    </Spinner>
 
 
     <LinearLayout
