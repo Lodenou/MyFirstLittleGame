@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:ellipsize="marquee"
+    android:textAlignment="center"
     android:textSize="18sp"
-    android:textColor="#808080"
-    android:text="[Selectionnez une classe]" />
+    android:textColor="#ffffff"
+    android:text="@string/select_a_class" />

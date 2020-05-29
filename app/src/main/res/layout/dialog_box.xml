@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_alert_linear"
     android:layout_width="fill_parent"
     android:layout_height="280dp"
     android:background="#26418f"
@@ -21,12 +22,18 @@
         android:textStyle="bold"/>
 
     <EditText
-        android:id="@+id/edit_text-dialog"
+        android:id="@+id/edit_text_dialog"
         android:layout_width="217dp"
         android:layout_height="wrap_content"
+        android:includeFontPadding="true"
+        android:paddingStart="9dp"
+        android:paddingEnd="9dp"
+        android:maxLength="11"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:background="@drawable/rounded_button"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
-        android:background="#ffffff"
+        android:hint="Character name"
         android:backgroundTint="#ffffff">
     </EditText>
 
@@ -44,12 +51,15 @@
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="match_parent"
+        android:layout_width="217dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
+        android:foregroundTint="#ffffff"
         android:backgroundTint="#ffffff"
         android:popupBackground="#ffffff"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         >
     </Spinner>
 

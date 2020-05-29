@@ -9,4 +9,5 @@
     <string name="done">Done</string>
     <string name="cancel">Cancel</string>
     <string name="choisissez_votre_classe">Choose your class</string>
+    <string name="select_a_class">[Select a class]</string>
 </resources>
