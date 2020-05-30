@@ -1,4 +1,4 @@
 package com.lodenou.mylittlegame;
 
-public class SurfaceView {
+public class GameView {
 }

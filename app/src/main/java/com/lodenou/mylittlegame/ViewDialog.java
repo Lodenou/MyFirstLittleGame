@@ -15,9 +15,11 @@ import android.widget.Toast;
 
 
 public class ViewDialog {
-    
+
+    StartActivity mStartActivity;
     private String[] mClasses = {"Guerrier","Magicien","Moine", "Ninja", "Samouraï","Paysan"};
     public static final String EXTRA_CHARACTER_NAME = "MY_EPIC_KEY";
+    private MusicService mServ;
 
 
     public void showDialog(final Activity activity, String msg){
@@ -86,7 +88,7 @@ public class ViewDialog {
 
 
     public void getDialoginfos() {
-
+        ;
     }
 
 }
