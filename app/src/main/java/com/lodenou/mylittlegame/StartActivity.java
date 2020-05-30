@@ -18,12 +18,15 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.Toast;
+
+import static java.security.AccessController.getContext;
 
 
 public class StartActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private boolean mIsBound = false;
-    private MusicService mServ;
+    public MusicService mServ;
     ImageButton mImageButton;
     Button new_game_button;
     private String[] mClasses = {"Guerrier","Magicien","Moine", "Ninja", "Samouraï","Paysan"};
@@ -39,6 +42,8 @@ public class StartActivity extends AppCompatActivity implements AdapterView.OnIt
         musicOn();
         muteSound();
         showDialog();
+        loadGameButton();
+        settingsButton();
 
     }
     public void muteSound() {
@@ -57,11 +62,6 @@ public class StartActivity extends AppCompatActivity implements AdapterView.OnIt
             }
         });
     }
-
-    public void startNewGame() {
-
-    }
-
     //BIND Music Service
     public void musicOn() {
         doBindService();
@@ -110,7 +110,7 @@ public class StartActivity extends AppCompatActivity implements AdapterView.OnIt
     @Override
     protected void onPause() {
         super.onPause();
-
+        mServ.pauseMusic();
         //Detect idle screen
         PowerManager pm = (PowerManager)
                 getSystemService(Context.POWER_SERVICE);
@@ -125,6 +125,13 @@ public class StartActivity extends AppCompatActivity implements AdapterView.OnIt
             }
         }
     }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        mServ.startMusic();
+    }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -137,35 +144,7 @@ public class StartActivity extends AppCompatActivity implements AdapterView.OnIt
 
     }
 
-    public void initiateSpinner() {
-        //SPINNER SETTINGS
-
-        //Getting the instance of Spinner and applying OnItemSelectedListener on it
-
-        final Spinner spin = (Spinner) findViewById(R.id.spinner);
-        spin.setOnItemSelectedListener(this);
-
-        //Creating the ArrayAdapter instance having the rooms' list
-        ArrayAdapter aa = new ArrayAdapter(this, android.R.layout.simple_spinner_item, mClasses);
-        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        //Setting the ArrayAdapter data on the Spinner and nothingselected
-        spin.setAdapter(new NothingSelectedSpinnerAdapter(
-                aa,
-                R.layout.contact_spinner_row_nothing_selected,
-                this));
-        spin.setPrompt("Select your class");
-    }
-
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
-
+    // first button click on ( New game )
     public void showDialog(){
         new_game_button = findViewById(R.id.first_button);
         new_game_button.setOnClickListener(new View.OnClickListener() {
@@ -175,5 +154,42 @@ public class StartActivity extends AppCompatActivity implements AdapterView.OnIt
                 alert.showDialog(StartActivity.this,"");
             }
         });
+    }
+
+    // Second button click on ( Load game )
+    public void loadGameButton(){
+        Button load_game_button = findViewById(R.id.second_button);
+        load_game_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(StartActivity.this, "Not yet established",
+                        Toast.LENGTH_SHORT ).show();
+            }
+        });
+
+    }
+
+    // Third button click on ( Settings )
+    public void settingsButton(){
+        Button settings_button = findViewById(R.id.third_button);
+        settings_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(StartActivity.this, "Not yet established",
+                        Toast.LENGTH_SHORT ).show();
+            }
+        });
+
+    }
+
+    // useless but needed
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }
