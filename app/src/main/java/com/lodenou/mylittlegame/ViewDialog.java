@@ -15,8 +15,7 @@ import android.widget.Toast;
 
 
 public class ViewDialog {
-
-    StartActivity mStartActivity;
+    
     private String[] mClasses = {"Guerrier","Magicien","Moine", "Ninja", "Samouraï","Paysan"};
     public static final String EXTRA_CHARACTER_NAME = "MY_EPIC_KEY";
 
@@ -65,7 +64,7 @@ public class ViewDialog {
             public void onClick(View v) {
                 if(dialogEditText.getText().toString().trim().length() == 0 || spinner.getItemAtPosition(spinner.getSelectedItemPosition()) == null){
                     Toast.makeText(dialog.getContext(),
-                            "Veuillez rentrer un email valide",
+                            "Fill in all fields",
                             Toast.LENGTH_LONG).show();
                 }
                 else {
@@ -87,7 +86,7 @@ public class ViewDialog {
 
 
     public void getDialoginfos() {
-        ;
+
     }
 
 }
