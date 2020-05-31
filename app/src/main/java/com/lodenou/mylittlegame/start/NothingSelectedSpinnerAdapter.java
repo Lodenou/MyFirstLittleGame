@@ -1,4 +1,4 @@
-package com.lodenou.mylittlegame;
+package com.lodenou.mylittlegame.start;
 
 import android.content.Context;
 import android.database.DataSetObserver;

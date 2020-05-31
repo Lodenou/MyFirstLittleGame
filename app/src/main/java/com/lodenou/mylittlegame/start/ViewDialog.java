@@ -1,4 +1,4 @@
-package com.lodenou.mylittlegame;
+package com.lodenou.mylittlegame.start;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -10,8 +10,13 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import com.lodenou.mylittlegame.R;
+import com.lodenou.mylittlegame.game.GameActivity;
+import com.lodenou.mylittlegame.start.MusicService;
+import com.lodenou.mylittlegame.start.NothingSelectedSpinnerAdapter;
+import com.lodenou.mylittlegame.start.StartActivity;
 
 
 public class ViewDialog {

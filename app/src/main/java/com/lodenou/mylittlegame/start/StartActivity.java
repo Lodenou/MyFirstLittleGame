@@ -1,10 +1,7 @@
-package com.lodenou.mylittlegame;
+package com.lodenou.mylittlegame.start;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -14,13 +11,11 @@ import android.os.IBinder;
 import android.os.PowerManager;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Spinner;
 import android.widget.Toast;
 
-import static java.security.AccessController.getContext;
+import com.lodenou.mylittlegame.R;
 
 
 public class StartActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {

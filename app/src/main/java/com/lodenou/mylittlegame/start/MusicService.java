@@ -1,17 +1,15 @@
-package com.lodenou.mylittlegame;
+package com.lodenou.mylittlegame.start;
 
 import android.app.Service;
-import android.content.Context;
 import android.content.Intent;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Binder;
 import android.os.IBinder;
-import android.view.View;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
-    public class MusicService extends Service implements MediaPlayer.OnErrorListener {
+import com.lodenou.mylittlegame.R;
+
+public class MusicService extends Service implements MediaPlayer.OnErrorListener {
 
         private final IBinder mBinder = new ServiceBinder();
         MediaPlayer mPlayer;

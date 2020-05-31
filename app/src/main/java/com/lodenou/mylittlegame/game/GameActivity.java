@@ -1,10 +1,15 @@
-package com.lodenou.mylittlegame;
+package com.lodenou.mylittlegame.game;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.lodenou.mylittlegame.start.MusicService;
+import com.lodenou.mylittlegame.R;
+import com.lodenou.mylittlegame.start.StartActivity;
+import com.lodenou.mylittlegame.start.ViewDialog;
 
 public class GameActivity extends AppCompatActivity {
 
